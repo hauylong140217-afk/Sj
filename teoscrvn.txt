@@ -28,4 +28,15 @@ loadstring(game:HttpGet(("https://raw.githubusercontent.com/daucobonhi/Ui-Redz-V
        Stroke = false,
        StrokeColor = Color3.fromRGB(255, 0, 0)
       })
-      
+------ Tab
+     local Tab1o = MakeTab({Name = "Script Farm"})
+     
+------- BUTTON
+    
+    AddButton(Tab1o, {
+     Name = "Redz Hub",
+    Callback = function()
+	  local Settings = {
+  JoinTeam = "Pirates"; -- Pirates/Marines
+  Translator = true; -- true/false
+}
