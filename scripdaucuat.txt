@@ -2,8 +2,8 @@ loadstring(game:HttpGet(("https://raw.githubusercontent.com/daucobonhi/Ui-Redz-V
 
        local Window = MakeWindow({
          Hub = {
-         Title = "téo🍎scrvn",
-         Animation = "Youtube: téo scr vn🍎🍎🍎"
+         Title = "teoscr",
+         Animation = "Youtube: teo🍎scr"
          },
         Key = {
         KeySystem = false,
@@ -22,8 +22,8 @@ loadstring(game:HttpGet(("https://raw.githubusercontent.com/daucobonhi/Ui-Redz-V
 
        MinimizeButton({
        Image = "http://www.roblox.com/asset/?id=96392217298536",
-       Size = {90, 90},
-       Color = Color3.fromRGB(15, 15, 15),
+       Size = {60, 60},
+       Color = Color3.fromRGB(10, 10, 10),
        Corner = true,
        Stroke = false,
        StrokeColor = Color3.fromRGB(255, 0, 0)
