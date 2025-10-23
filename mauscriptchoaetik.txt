@@ -1,0 +1,112 @@
+-- ✅ MẪU CHUẨN ĐÃ FIX | TÉO HUB 🍎
+-- Đã chỉnh link Fluent + thêm bảo vệ lỗi nhẹ 👇
+
+repeat task.wait() until game:IsLoaded()
+
+-- 🟢 Nút mở menu chính
+local ScreenGui = Instance.new("ScreenGui")
+local ImageButton = Instance.new("ImageButton")
+local UICorner = Instance.new("UICorner")
+
+ScreenGui.Parent = game.CoreGui
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+ImageButton.Parent = ScreenGui
+ImageButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ImageButton.BorderSizePixel = 0
+ImageButton.Position = UDim2.new(0.106, 0, 0.162, 0)
+ImageButton.Size = UDim2.new(0, 40, 0, 40)
+ImageButton.Draggable = true
+ImageButton.Image = "rbxassetid://136586135876855"  -- 👈 thêm "rbxassetid://" để hiển thị đúng ảnh
+
+UICorner.CornerRadius = UDim.new(1, 10)
+UICorner.Parent = ImageButton
+
+ImageButton.MouseButton1Down:Connect(function()
+	game:GetService("VirtualInputManager"):SendKeyEvent(true, Enum.KeyCode.End, false, game)
+end)
+
+-- 🟣 Giao diện Fluent (đã sửa link sang raw)
+local success, Fluent = pcall(function()
+	return loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/main/main.lua"))()
+end)
+
+if not success then
+	warn("❌ Không tải được Fluent UI. Kiểm tra kết nối hoặc link.")
+	return
+end
+
+repeat task.wait() until game:IsLoaded()
+
+-- 🪟 Cửa sổ chính
+local Window = Fluent:CreateWindow({
+	Title = "KENCUTE 24 =}",
+	SubTitle = "mới up lên script",
+	TabWidth = 157,
+	Size = UDim2.fromOffset(450, 300),
+	Acrylic = true,
+	Theme = "Light", -- Amethyst, Dark, Aqua, Light,...
+	MinimizeKey = Enum.KeyCode.End
+})
+
+-- 📑 Các tab
+local Tabs = {
+	Main0 = Window:AddTab({ Title = "main" }),
+	Main1 = Window:AddTab({ Title = "automatic" }),
+	Main2 = Window:AddTab({ Title = "setting" }),
+	Main3 = Window:AddTab({ Title = "speed" }),
+	Main4 = Window:AddTab({ Title = "jump" }),
+}
+
+------------------------------------------------
+-- TAB 1: Liên kết / social
+------------------------------------------------
+Tabs.Main0:AddButton({
+	Title = "TikTok 🎵",
+	Description = "tiktok me)",
+	Callback = function()
+		setclipboard("https://www.tiktok.com/@ken.cute24")
+	end
+})
+
+Tabs.Main0:AddButton({
+	Title = "Discord 💬",
+	Description = "discord",
+	Callback = function()
+		setclipboard("https://discord.gg/NQybGQQaf")
+	end
+})
+
+------------------------------------------------
+-- TAB 2: Script mẫu
+------------------------------------------------
+Tabs.Main1:AddButton({
+	Title = "Speed Hub 🌱",
+	Description = "script này ngon á, đủ chức năng 😃",
+	Callback = function()
+		local Settings = {
+			JoinTeam = "Pirates", -- Pirates hoặc Marines
+			Translator = true
+		}
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Speed-Hub-X/main/Speed%20Hub%20X.lua", true))()
+	end
+})n nút hiển thị
+	Description = "script này ngon á đủ chức năng cả😃",-- 👈 mô tả
+	Callback = function()
+		local Settings = {
+			JoinTeam = "Pirates";   -- 👈 team mặc định: Pirates hoặc Marines
+			Translator = true;      -- 👈 bật dịch sang tiếng Việt nếu có
+		}
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Speed-Hub-X/main/Speed%20Hub%20X.lua", true))() -- 👈 link script tải
+	end
+})
+��� tên nút hiển thị
+	Description = "script này ngon á đủ chức năng cả😃",-- 👈 mô tả
+	Callback = function()
+		local Settings = {
+			JoinTeam = "Pirates";   -- 👈 team mặc định: Pirates hoặc Marines
+			Translator = true;      -- 👈 bật dịch sang tiếng Việt nếu có
+		}
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Speed-Hub-X/main/Speed%20Hub%20X.lua", true))() -- 👈 link script tải
+	end
+})
